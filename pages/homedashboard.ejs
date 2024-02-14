@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title><%=dashboardTitle%></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  </style>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  </head>
+  <body class="w3-light-grey w3-content" style="max-width:1600px">
+  <main>
+    <div class="connection-status">
+      <h2><%=dashboardTitle%></h2>
+      <h3>Connection Status: <span class="status" id="mqttstatus">Disconnected</span></h3>
+    </div>
+  </main>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px" id="listChairs">
+  
+     <!-- First Photo Grid-->
+    <div class="w3-row-padding" id="deviceList">
+      <!--<div class="w3-third w3-container w3-margin-bottom" style="background-color:green" id="chair1">
+        <img src="images/chairgreen.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h1><b>01</b></h1>
+          <h4 id="weight">False</h4>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom" style="background-color:green">
+        <img src="images/chairgreen.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h1><b>02</b></h1>
+        </div>
+      </div>
+      <div class="w3-third w3-container" style="background-color:green">
+        <img src="images/chairgreen.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h1><b>03</b></h1>
+        </div>
+      </div>-->
+    </div>
+    
+    <!-- Second Photo Grid-->
+    <!--<div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom" style="background-color:green">
+        <img src="images/chairgreen.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h1><b>04</b></h1>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom" style="background-color:green">
+        <img src="images/chairgreen.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h1><b>05</b></h1>
+        </div>
+      </div>
+      <div class="w3-third w3-container" style="background-color:green">
+        <img src="images/chairgreen.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h1><b>06</b></h1>
+        </div>
+      </div>
+    </div>-->
+  </div>
+
+  <script type="module" src="./pageHandler.js">
+    document.getElementById("chair1").style = "background-color:green";
+    document.getElementById("chair2").style = "background-color:green";
+    document.getElementById("chair3").style = "background-color:green";
+  </script>
+  <script type="module" src="./mqttWSservice.js"></script>
+  
+  </body>
+  </html>
+  
+  
